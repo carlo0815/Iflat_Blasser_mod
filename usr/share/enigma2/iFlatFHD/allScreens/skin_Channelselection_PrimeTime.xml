@@ -1,0 +1,75 @@
+<skin>
+
+  <screen flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent">
+    <widget source="ServiceEvent" render="Picon" position="1185,0" size="100,60" zPosition="2" transparent="1" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 42" position="15,6" render="Label" size="900,50" source="Title" transparent="1" />
+    <widget name="list" position="30,89" size="1200,860" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" colorServiceDescription="yellow" colorServiceDescriptionSelected="selectionbarforeground" progressbarHeight="10" progressbarBorderWidth="1" colorEventProgressbar="yellow" colorEventProgressbarBorder="foreground" colorEventProgressbarSelected="yellow" colorEventProgressbarBorderSelected="foreground3" foregroundColorSelected="selectionbarforeground" foregroundColorServiceNotAvail="accent1" colorServiceRecording="red" serviceItemHeight="41" serviceNumberFont="Regular;33" serviceNameFont="Regular;33" serviceInfoFont="Regular;31" transparent="1" />
+    <widget backgroundColor="background" foregroundColor="foreground2" font="Regular; 36" halign="left" position="1255,130" render="Label" size="650,44" source="ServiceEvent" transparent="1" valign="top">
+      <convert type="EventName">Description</convert>                                                                                                      
+    </widget>
+    <widget backgroundColor="background" font="Regular; 25" position="1211,80" render="Label" size="110,30" source="ServiceEvent" transparent="1" halign="right">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText" />
+    </widget>
+    <widget backgroundColor="background" font="Regular; 25" position="1836,80" render="Label" size="110,30" source="ServiceEvent" transparent="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format:%H:%M</convert>       
+    </widget>
+    <widget backgroundColor="background" font="Regular; 32" position="1255,185" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=5,startdelay=11500,wrap,always=0" size="650,660" source="ServiceEvent" transparent="1" valign="top">
+      <convert type="EventName">ExtendedDescription</convert>                                         
+    </widget>
+    <widget source="ServiceEvent" render="NextEvents" position="1255,872" size="650,120" noWrap="1" font="Regular;25" foregroundColor="foreground" backgroundColor="background" valign="top" transparent="1">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="center" name="key_red" position="15,1037" size="280,36" transparent="1" valign="bottom" />
+    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="center" name="key_green" position="310,1037" size="280,36" transparent="1" valign="bottom" />
+    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="center" name="key_yellow" position="605,1037" size="280,36" transparent="1" valign="bottom" />
+    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="center" name="key_blue" position="900,1037" size="280,36" transparent="1" valign="bottom" />
+    <eLabel name="button_red" position="15,1070" size="280,4" backgroundColor="button_red" zPosition="1" />
+    <eLabel name="button_green" position="310,1070" size="280,4" backgroundColor="button_green" zPosition="1" />
+    <eLabel name="button_yellow" position="605,1070" size="280,4" backgroundColor="button_yellow" zPosition="1" />
+    <eLabel name="button_blue" position="900,1070" size="280,4" backgroundColor="button_blue" zPosition="1" />
+    <widget source="ServiceEvent" render="Progress" foregroundColor="progress" position="1335,98" size="486,5" zPosition="1" transparent="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <eLabel backgroundColor="white" name="new eLabel" position="1335,100" size="486,1" />
+    <!-- /*Lines-->
+    <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/1240.png" position="0,962" size="1240,1" zPosition="5" />
+    <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/660.png" position="1250,860" size="660,1" zPosition="5" />
+    <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/950.png" position="1242,67" size="1,950" zPosition="5" />
+    <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/line_ud.png" position="0,58" size="1920,3" zPosition="5" />
+    <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/line_ud.png" position="1,1019" size="1920,3" zPosition="5" />
+    <!--Lines */-->
+    <!-- /*Uhr-->
+    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 42" halign="right" position="1704,6" render="Label" size="200,50" source="global.CurrentTime" transparent="1" valign="center">
+      <convert type="ClockToText">Format:%H:%M:%S</convert>
+    </widget>
+    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" position="1257,18" render="Label" size="450,37" source="global.CurrentTime" transparent="1" valign="center" halign="right">
+      <convert type="ClockToText">Format:%A, %d. %B %Y</convert>
+    </widget>
+    <!--Uhr */-->
+    <eLabel name="button_red" position="15,1070" size="280,4" backgroundColor="button_red" zPosition="1" />
+    <eLabel name="button_green" position="310,1070" size="280,4" backgroundColor="button_green" zPosition="1" />
+    <eLabel name="button_yellow" position="605,1070" size="280,4" backgroundColor="button_yellow" zPosition="1" />
+    <eLabel name="button_blue" position="900,1070" size="280,4" backgroundColor="button_blue" zPosition="1" />
+    <eLabel name="DB" position="0,1023" size="1920,57" zPosition="-10" backgroundColor="background2" />
+    <eLabel name="DB" position="0,56" size="1920,967" zPosition="-10" backgroundColor="background" />
+    <eLabel name="DB" position="0,0" size="1920,57" zPosition="-10" backgroundColor="background2" />
+    <eLabel name="button menu" position="1613,1036" size="60,30" backgroundColor="mbgc" text="MENU" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+    <eLabel name="button menu bg" position="1612,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+    <eLabel name="button epg" position="1689,1036" size="60,30" backgroundColor="mbgc" text="EPG" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+    <eLabel name="button epg bg" position="1688,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+    <eLabel name="button lr" position="1766,1036" size="60,30" backgroundColor="mbgc" text="L / R" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+    <eLabel name="button lire bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+    <eLabel name="button exit" position="1843,1036" size="60,30" backgroundColor="mbgc" text="EXIT" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+    <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+    <eLabel text="Prime Time:" position="19,975" size="200,40" font="Regular; 30" backgroundColor="background" transparent="1" foregroundColor="red" halign="left" />
+
+<widget position="220,975" size="1010,40" source="ServiceEvent" render="Label" font="Regular; 30" halign="left" backgroundColor="background" zPosition="2" transparent="1" foregroundColor="yellow">
+  <convert type="iFlatEventName2">PrimeTimeWithDuration</convert>
+</widget>
+  </screen>
+  
+</skin>

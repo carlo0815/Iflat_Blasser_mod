@@ -1,0 +1,70 @@
+<skin>
+    
+  <colors>
+        <color name="accent1" value="#00b3b4b4" />
+        <color name="background" value="#20000000" /> <!-- #20 Stärke 50 Prozent weniger Transparenz zum Standard - Hintergrund Kachel schwarz -->
+        <color name="background2" value="#201DD7A8" /> <!-- #20 Stärke 50 Prozent weniger Transparenz zum Standard - Hintergrund Kachel mint -->
+        <color name="background4" value="#001DD7A8" /> <!-- #00 Stärke Transaprenz GMEPG_CoolTV mint -->
+        <color name="black" value="#00000000" />
+        <color name="blue" value="#000064c7" />
+        <color name="button_blue" value="#000088d6" /> <!-- #00 Stärke Transaprenz Menubutton rot -->
+        <color name="button_green" value="#0011b900" /> <!-- #00 Stärke Transaprenz Menubutton green -->
+        <color name="button_mfgc" value="#00ffffff" /> <!-- Buttons Menu Schriftfarbe weiss-->
+        <color name="button_mbgc" value="#00000000" /> <!-- Buttons Menu Hintergrundfarbe schwarz-->
+        <color name="button_mbg" value="#00ffffff" /> <!-- Erzeug schmalen Rand um die Buttons weiss -->
+        <color name="button_red" value="#00ff0000" /> <!-- #00 Stärke Transaprenz Menubutton gelb -->
+        <color name="button_yellow" value="#00ffff00" /> <!-- #00 Stärke Transaprenz Menubutton blau -->
+        <color name="CoolSelBG" value="#001DD7A8" />      <!-- background 4 - mint -->
+        <color name="CoolSelFG" value="#00000000" />      <!-- foreground 3 - schwarz -->
+        <color name="dark" value="#00294a6b" />
+        <color name="foreground" value="#00ffffff" />
+        <color name="foreground2" value="#001DD7A8" /> <!-- Titelfarbe mint -->
+        <color name="foreground3" value="#00000000" /> <!-- Farbe schwarz zu Kachel mint -->   
+        <color name="green" value="#0031a500" />
+        <color name="grey" value="#005A5A5A" />
+        <color name="PreTrans" value="#ccffffff" />
+        <color name="progress" value="#001DD7A8" /> <!-- Progressbarfarbe mint --> 
+        <color name="red" value="#00ff0000" />
+        <color name="scrollbarsfgc" value="#001DD7A8" /> <!-- scrollbarSliderForegroundColor mint -->
+        <color name="scrollbarsbgc" value="#001DD7A8" /> <!-- scrollbarSliderBorderColor mint - nicht genutzt -->
+        <color name="selectionbarbackground" value="#001DD7A8" /> <!-- #00 Stärke Transparenz Hintergrundfarbe selection_bar global mint -->
+        <color name="selectionbarforeground" value="#00000000" /> <!-- #00 Stärke Transparenz Hintergrundfarbe selection_bar schwarz global -->  
+        <color name="shadow" value="#00101010" />
+        <color name="subtitle" value="#00dcdcdc" />
+        <color name="transparent" value="#ffffffff" />
+        <color name="transpBlack" value="#60000000" />                                                 
+        <color name="white" value="#00ffffff" />
+        <color name="yellow" value="#00e5b243" />
+  </colors>
+  
+  <windowstyle id="0" type="skinned">
+        <title font="Regular;32" offset="15,15" />
+        <color name="Background" color="background" />
+        <color name="LabelForeground" color="foreground" />
+        <color name="ListboxBackground" color="background" />
+        <color name="ListboxForeground" color="foreground" />
+        <color name="ListboxMarkedBackground" color="background" />
+        <color name="ListboxMarkedForeground" color="foreground" />
+        <color name="ListboxMarkedAndSelectedBackground" color="red" />
+        <color name="ListboxMarkedAndSelectedForeground" color="foreground" />
+        <color name="ListboxSelectedBackground" color="selectionbarbackground" /> 
+        <color name="ListboxSelectedForeground" color="selectionbarforeground" />
+        <color name="WindowTitleForeground" color="foreground" />
+        <color name="WindowTitleBackground" color="background" />
+            <borderset name="bsWindow">
+                <pixmap filename="iFlatFHD/windows/b_tl.png" pos="bpTopLeft" />
+                <pixmap filename="iFlatFHD/windows/b_t.png" pos="bpTop" />
+                <pixmap filename="iFlatFHD/windows/b_tr.png" pos="bpTopRight" />
+                <pixmap filename="iFlatFHD/windows/b_l.png" pos="bpLeft" />
+                <pixmap filename="iFlatFHD/windows/b_r.png" pos="bpRight" />
+                <pixmap filename="iFlatFHD/windows/b_bl.png" pos="bpBottomLeft" />
+                <pixmap filename="iFlatFHD/windows/b_b.png" pos="bpBottom" />
+                <pixmap filename="iFlatFHD/windows/b_br.png" pos="bpBottomRight" />
+            </borderset>
+            <borderset name="bsListboxEntry">
+                <pixmap filename="iFlatFHD/line_s/line_select.png" pos="bpTop"/>
+                <pixmap filename="iFlatFHD/line_s/line_select.png" pos="bpBottom"/>
+            </borderset>
+  </windowstyle>
+ 
+</skin>

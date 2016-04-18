@@ -1,0 +1,153 @@
+<skin>
+
+<screen name="InfoBar" position="0,0" size="1920,1080" title="Infobar" flags="wfNoBorder" backgroundColor="transparent">
+  <!--/*Wetter-->
+  <eLabel name="DB" position="0,0" size="1920,87" zPosition="-10" backgroundColor="background2" />
+  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/line_ud.png" position="0,88" size="1920,3" zPosition="5" />
+  <widget source="session.CurrentService" render="Label" position="10,1" size="60,60" font="Meteo;48" zPosition="10" halign="center" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">currentWeatherCode</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="72,21" size="40,26" font="Regular;24" zPosition="10" halign="center" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">currentWeatherTemp</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="112,21" size="30,26" font="Regular;24" zPosition="10" halign="left" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">CF</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="245,1" size="60,60" font="Meteo;48" zPosition="10" halign="center" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTodayCode</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="245,60" size="60,27" font="Regular;24" zPosition="10" halign="center" valign="top" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTodayDay</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="307,60" size="110,27" font="Regular;24" zPosition="10" halign="left" valign="top" backgroundColor="background2" transparent="1" noWrap="1" foregroundColor="foreground3">
+      <convert type="iFlatWeather">forecastTodayDate</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="307,6" size="80,26" font="Regular;24" zPosition="10" halign="left" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTodayTempMax</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="307,32" size="80,25" font="Regular;24" zPosition="10" halign="left" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTodayTempMin</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="532,1" size="60,60" font="Meteo;48" zPosition="10" halign="center" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrowCode</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="532,60" size="60,27" font="Regular;24" zPosition="10" halign="center" valign="top" backgroundColor="background2" transparent="1" noWrap="1" foregroundColor="foreground3">
+      <convert type="iFlatWeather">forecastTomorrowDay</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="594,59" size="110,27" font="Regular;24" zPosition="10" halign="left" valign="top" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrowDate</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="594,6" size="80,25" font="Regular;24" zPosition="10" halign="left" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrowTempMax</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="594,31" size="80,25" font="Regular;24" zPosition="10" halign="left" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrowTempMin</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="819,1" size="60,60" font="Meteo;48" zPosition="10" halign="center" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow1Code</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="819,60" size="60,27" font="Regular;24" zPosition="10" halign="center" valign="top" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow1Day</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="881,60" size="110,27" font="Regular;24" zPosition="10" halign="left" valign="top" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow1Date</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="881,6" size="80,25" font="Regular;24" zPosition="10" halign="left" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow1TempMax</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="881,31" size="80,25" font="Regular;24" zPosition="10" halign="left" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow1TempMin</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1106,1" size="60,60" font="Meteo;48" zPosition="10" halign="center" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow2Code</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1106,60" size="60,27" font="Regular;24" zPosition="10" halign="center" valign="top" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow2Day</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1168,60" size="110,27" font="Regular;24" zPosition="10" halign="left" valign="top" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow2Date</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1168,6" size="80,25" font="Regular;24" zPosition="10" halign="left" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow2TempMax</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1168,31" size="80,25" font="Regular;24" zPosition="10" halign="left" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow2TempMin</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1393,1" size="60,60" font="Meteo;48" zPosition="10" halign="center" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow3Code</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1393,60" size="60,27" font="Regular;24" zPosition="10" halign="center" valign="top" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow3Day</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1455,60" size="110,27" font="Regular;24" zPosition="10" halign="left" valign="top" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow3Date</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1455,6" size="80,25" font="Regular;24" zPosition="10" halign="left" valign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="iFlatWeather">forecastTomorrow3TempMax</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1455,31" size="80,25" font="Regular;24" zPosition="10" halign="left" valign="center" backgroundColor="background2" transparent="1" noWrap="1" foregroundColor="foreground3">
+      <convert type="iFlatWeather">forecastTomorrow3TempMin</convert>
+    </widget>
+    <eLabel backgroundColor="background2" font="Regular;24" halign="center" position="10,60" size="120,27" text="NOW" transparent="1" zPosition="1" foregroundColor="foreground3" valign="top" />
+   <eLabel text="Ort:" position="1635,1" size="60,27" zPosition="5" halign="left" font="Regular;24" backgroundColor="background2" transparent="1" foregroundColor="foreground3" />
+  <widget noWrap="1" backgroundColor="background2" font="Regular;24" foregroundColor="foreground3" render="Label" position="1635,30" size="275,60" source="session.CurrentService" zPosition="3" halign="left" valign="bottom" transparent="1">
+    <convert type="iFlatWeather">currentLocation</convert>
+  </widget>
+  <!--Wetter */-->
+  <eLabel name="IB" position="0,1022" size="1920,58" zPosition="-10" backgroundColor="background2" />
+  <eLabel name="IB" position="0,875" size="1920,148" zPosition="-10" backgroundColor="background" />
+  <widget source="session.CurrentService" render="Picon" position="29,883" zPosition="4" size="220,132" transparent="1" alphatest="blend">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1730,897" size="160,70" font="Regular; 52" halign="right" foregroundColor="foreground" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <eLabel name="new eLabel" position="485,991" size="1080,1" backgroundColor="white" />
+  <widget source="session.Event_Now" render="Progress" foregroundColor="progress" position="485,989" size="1080,5" zPosition="1" transparent="1">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=50,repeat=5,startdelay=1500,always=0" position="285,897" size="1420,75" font="Regular; 60" halign="left" valign="top" backgroundColor="background" transparent="1" foregroundColor="foreground" zPosition="2" noWrap="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Next" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=50,repeat=5,startdelay=1500,always=0" position="485,1031" size="1080,40" font="Regular; 35" halign="left" valign="bottom" backgroundColor="background2" foregroundColor="foreground3" transparent="1" noWrap="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="285,975" size="90,30" font="Regular; 27" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="2">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="365,975" size="90,30" font="Regular; 27" halign="right" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="2">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="1575,975" size="130,30" font="Regular; 27" halign="right" valign="center" backgroundColor="background" transparent="1" foregroundColor="foreground" zPosition="2">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="365,1038" size="90,30" font="Regular; 27" halign="right" foregroundColor="foreground3" backgroundColor="background2" transparent="1" zPosition="2">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="1575,1038" size="130,30" font="Regular; 27" halign="right" valign="center" backgroundColor="background2" foregroundColor="foreground3" transparent="1">
+    <convert type="EventTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="285,1038" size="90,30" font="Regular; 27" halign="left" foregroundColor="foreground3" backgroundColor="background2" transparent="1" zPosition="2">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="background2" foregroundColor="foreground3" font="Regular; 27" halign="center" position="365,1038" size="10,30" text="-" transparent="1" zPosition="1" />
+  <eLabel backgroundColor="background" font="Regular; 27" halign="center" position="365,975" size="10,30" text="-" transparent="1" zPosition="1" />
+  <!--/*Lines-->
+  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/1920.png" position="0,1020" size="1920,1" zPosition="5" />
+  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/1920.png" position="0,877" size="1920,1" zPosition="5" />
+  <!--Lines */-->
+  <widget alphatest="blend" pixmap="iFlatFHD/icons/audio/rec_on.png" position="1829,982" render="Pixmap" size="60,20" source="session.RecordState" zPosition="4">
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="transparent" font="Regular; 100" foregroundColor="PreTrans" halign="left" noWrap="1" render="Label" size="1700,130" source="session.CurrentService" transparent="0" zPosition="-30" position="29,748" valign="top">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+</screen>
+
+</skin>
