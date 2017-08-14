@@ -16,9 +16,9 @@
     <font filename="/usr/share/enigma2/iFlatFHD/fonts/HandelGotD.ttf" name="Regular" replacement="0" scale="100" />
     <font filename="/usr/share/enigma2/iFlatFHD/fonts/meteocons.ttf" name="Meteo" scale="100" />
     <font filename="/usr/share/enigma2/iFlatFHD/fonts/Gidole-Regular.ttf" name="Gidole-Regular" replacement="0" scale="100" />
-		<alias name="PluginBrowser0"            font="Regular" size="28" />
+    <!--alias name="PluginBrowser0"            font="Regular" size="28" />
 		<alias name="PluginBrowser1"            font="Regular" size="20" />
-		<alias name="ChoiceList"                font="Regular" size="28" />
+		<alias name="ChoiceList"                font="Regular" size="28" /-->
   </fonts>
   <colors>
     <color name="accent1" value="#00808080" />
@@ -1173,72 +1173,84 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))</app
     <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
   </screen>
   <screen flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent">
-    <widget source="ServiceEvent" render="Picon" position="1255,0" size="100,60" zPosition="2" transparent="1" alphatest="blend">
-      <convert type="ServiceName">Reference</convert>
+  <widget source="ServiceEvent" render="Picon" position="1255,0" size="100,60" zPosition="2" transparent="1" alphatest="blend">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 42" position="15,6" render="Label" size="1220,50" source="Title" transparent="1" />
+  <widget name="list" position="30,72" size="1200,820" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" colorServiceDescription="yellow" colorServiceDescriptionSelected="selectionbarforeground" progressbarHeight="10" progressbarBorderWidth="1" colorEventProgressbar="yellow" colorEventProgressbarBorder="foreground" colorEventProgressbarSelected="yellow" colorEventProgressbarBorderSelected="foreground3" foregroundColorSelected="selectionbarforeground" foregroundColorServiceNotAvail="accent1" colorServiceRecording="red" serviceItemHeight="41" serviceNumberFont="Regular;33" serviceNameFont="Regular;33" serviceInfoFont="Regular;31" transparent="1" />
+  <widget backgroundColor="background" font="Regular; 25" position="1211,985" render="Label" size="110,30" source="ServiceEvent" transparent="1" halign="right">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText" />
+  </widget>
+  <widget backgroundColor="background" font="Regular; 25" position="1836,985" render="Label" size="110,30" source="ServiceEvent" transparent="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 32" position="1255,130" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=95,startdelay=8000,wrap,always=0" size="650,852" source="ServiceEvent" transparent="1" valign="top">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <eLabel backgroundColor="background" foregroundColor="foreground" font="Regular; 25" position="192,917" size="10,35" text=":" transparent="1" halign="center" valign="top" />
+  <widget source="ServiceEvent" render="NextEvents" position="215,922" size="1000,87" noWrap="1" font="Regular;25" foregroundColor="foreground" backgroundColor="background" valign="top" transparent="1">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=50,repeat=5,startdelay=4000,always=0" position="1255,75" size="650,48" font="Regular; 38" backgroundColor="background" transparent="1" foregroundColor="foreground2" halign="left" valign="top">
+    <convert type="EventName">Description</convert>
+  </widget>
+  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="center" name="key_red" position="15,1037" size="200,36" transparent="1" valign="bottom" />
+  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="center" name="key_green" position="230,1037" size="200,36" transparent="1" valign="bottom" />
+  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="center" name="key_yellow" position="445,1037" size="200,36" transparent="1" valign="bottom" />
+  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="center" name="key_blue" position="660,1037" size="200,36" transparent="1" valign="bottom" />
+  <eLabel name="button_red" position="15,1070" size="200,4" backgroundColor="button_red" zPosition="1" />
+  <eLabel name="button_green" position="230,1070" size="200,4" backgroundColor="button_green" zPosition="1" />
+  <eLabel name="button_yellow" position="445,1070" size="200,4" backgroundColor="button_yellow" zPosition="1" />
+  <eLabel name="button_blue" position="660,1070" size="200,4" backgroundColor="button_blue" zPosition="1" />
+  <widget source="ServiceEvent" render="Progress" foregroundColor="progress" position="1335,998" size="486,5" zPosition="1" transparent="1">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <eLabel backgroundColor="white" name="new eLabel" position="1335,1000" size="486,1" />
+  <eLabel backgroundColor="background" foregroundColor="foreground" font="Regular; 25" position="30,922" size="160,35" text="NEXT" transparent="1" halign="right" valign="top" />
+  <!-- /*Lines-->
+  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/1240.png" position="0,914" size="1240,1" zPosition="5" />
+  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/950.png" position="1242,67" size="1,950" zPosition="5" />
+  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/line_ud.png" position="0,58" size="1920,3" zPosition="5" />
+  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/line_ud.png" position="0,1019" size="1920,3" zPosition="5" />
+  <!--Lines */-->
+  <!-- /*Uhr-->
+  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 42" halign="right" position="1704,6" render="Label" size="200,50" source="global.CurrentTime" transparent="1" valign="center">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" position="1327,18" render="Label" size="450,37" source="global.CurrentTime" transparent="1" valign="center" halign="right">
+    <convert type="ClockToText">Format:%A, %d. %B %Y</convert>
+  </widget>
+  <!--Uhr */-->
+  <eLabel name="button_red" position="15,1070" size="200,4" backgroundColor="button_red" zPosition="1" />
+  <eLabel name="button_green" position="230,1070" size="200,4" backgroundColor="button_green" zPosition="1" />
+  <eLabel name="button_yellow" position="445,1070" size="200,4" backgroundColor="button_yellow" zPosition="1" />
+  <eLabel name="button_blue" position="660,1070" size="200,4" backgroundColor="button_blue" zPosition="1" />
+  <eLabel name="DB" position="5,1023" size="1920,57" zPosition="-10" backgroundColor="background2" />
+  <eLabel name="DB" position="0,56" size="1920,967" zPosition="-10" backgroundColor="background" />
+  <eLabel name="DB" position="0,0" size="1920,57" zPosition="-10" backgroundColor="background2" />
+  <eLabel name="button menu" position="1613,1036" size="60,30" backgroundColor="button_mbgc" text="MENU" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button menu bg" position="1612,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button epg" position="1689,1036" size="60,30" backgroundColor="button_mbgc" text="EPG" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button epg bg" position="1688,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button lr" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="L / R" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button lire bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button exit" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+    <ePixmap alphatest="blend" pixmap="iFlatFHD/skin_default/icons/ico_mp_play.png" position="870,1047" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="iFlatFHD/skin_default/icons/ico_mp_forward.png" position="1370,1047" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="iFlatFHD/skin_default/icons/ico_mp_rewind.png" position="1120,1047" size="30,40" /> 
+   <widget source="ServiceEvent" render="Label" position="905,1037" size="200,36" noWrap="1" font="Regular;26" foregroundColor="foreground3" backgroundColor="background2" transparent="1">
+      <convert type="NFRFunktion">Plugins</convert>
     </widget>
-    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 42" position="15,6" render="Label" size="1220,50" source="Title" transparent="1" />
-    <widget name="list" position="30,75" size="1200,820" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" colorServiceDescription="yellow" colorServiceDescriptionSelected="selectionbarforeground" progressbarHeight="10" progressbarBorderWidth="1" colorEventProgressbar="yellow" colorEventProgressbarBorder="foreground" colorEventProgressbarSelected="yellow" colorEventProgressbarBorderSelected="foreground3" foregroundColorSelected="selectionbarforeground" foregroundColorServiceNotAvail="accent1" colorServiceRecording="red" serviceItemHeight="41" serviceNumberFont="Regular;33" serviceNameFont="Regular;33" serviceInfoFont="Regular;31" transparent="1" />
-    <widget backgroundColor="background" font="Regular; 25" position="1211,985" render="Label" size="110,30" source="ServiceEvent" transparent="1" halign="right">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText" />
-    </widget>
-    <widget backgroundColor="background" font="Regular; 25" position="1836,985" render="Label" size="110,30" source="ServiceEvent" transparent="1">
-      <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 32" position="1255,130" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=95,startdelay=8000,wrap,always=0" size="650,852" source="ServiceEvent" transparent="1" valign="top">
-      <convert type="EventName">ExtendedDescription</convert>
-    </widget>
-    <eLabel backgroundColor="background" foregroundColor="foreground" font="Regular; 25" position="192,917" size="10,35" text=":" transparent="1" halign="center" valign="top" />
-    <widget source="ServiceEvent" render="NextEvents" position="215,922" size="1000,87" noWrap="1" font="Regular;25" foregroundColor="foreground" backgroundColor="background" valign="top" transparent="1">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
-    <widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=50,repeat=5,startdelay=4000,always=0" position="1255,75" size="650,48" font="Regular; 38" backgroundColor="background" transparent="1" foregroundColor="foreground2" halign="left" valign="top">
-      <convert type="EventName">Description</convert>
-    </widget>
-    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="center" name="key_red" position="15,1037" size="280,36" transparent="1" valign="bottom" />
-    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="center" name="key_green" position="310,1037" size="280,36" transparent="1" valign="bottom" />
-    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="center" name="key_yellow" position="605,1037" size="280,36" transparent="1" valign="bottom" />
-    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="center" name="key_blue" position="900,1037" size="280,36" transparent="1" valign="bottom" />
-    <eLabel name="button_red" position="15,1070" size="280,4" backgroundColor="button_red" zPosition="1" />
-    <eLabel name="button_green" position="310,1070" size="280,4" backgroundColor="button_green" zPosition="1" />
-    <eLabel name="button_yellow" position="605,1070" size="280,4" backgroundColor="button_yellow" zPosition="1" />
-    <eLabel name="button_blue" position="900,1070" size="280,4" backgroundColor="button_blue" zPosition="1" />
-    <widget source="ServiceEvent" render="Progress" foregroundColor="progress" position="1335,998" size="486,5" zPosition="1" transparent="1">
-      <convert type="EventTime">Progress</convert>
-    </widget>
-    <eLabel backgroundColor="white" name="new eLabel" position="1335,1000" size="486,1" />
-    <eLabel backgroundColor="background" foregroundColor="foreground" font="Regular; 25" position="30,922" size="160,35" text="NEXT" transparent="1" halign="right" valign="top" />
-    <!-- /*Lines-->
-    <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/1240.png" position="0,914" size="1240,1" zPosition="5" />
-    <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/950.png" position="1242,67" size="1,950" zPosition="5" />
-    <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/line_ud.png" position="0,58" size="1920,3" zPosition="5" />
-    <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/line_ud.png" position="0,1019" size="1920,3" zPosition="5" />
-    <!--Lines */-->
-    <!-- /*Uhr-->
-    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 42" halign="right" position="1704,6" render="Label" size="200,50" source="global.CurrentTime" transparent="1" valign="center">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" position="1327,18" render="Label" size="450,37" source="global.CurrentTime" transparent="1" valign="center" halign="right">
-      <convert type="ClockToText">Format:%A, %d. %B %Y</convert>
-    </widget>
-    <!--Uhr */-->
-    <eLabel name="button_red" position="15,1070" size="280,4" backgroundColor="button_red" zPosition="1" />
-    <eLabel name="button_green" position="310,1070" size="280,4" backgroundColor="button_green" zPosition="1" />
-    <eLabel name="button_yellow" position="605,1070" size="280,4" backgroundColor="button_yellow" zPosition="1" />
-    <eLabel name="button_blue" position="900,1070" size="280,4" backgroundColor="button_blue" zPosition="1" />
-    <eLabel name="DB" position="0,1023" size="1920,57" zPosition="-10" backgroundColor="background2" />
-    <eLabel name="DB" position="0,56" size="1920,967" zPosition="-10" backgroundColor="background" />
-    <eLabel name="DB" position="0,0" size="1920,57" zPosition="-10" backgroundColor="background2" />
-    <eLabel name="button menu" position="1613,1036" size="60,30" backgroundColor="button_mbgc" text="MENU" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
-    <eLabel name="button menu bg" position="1612,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
-    <eLabel name="button epg" position="1689,1036" size="60,30" backgroundColor="button_mbgc" text="EPG" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
-    <eLabel name="button epg bg" position="1688,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
-    <eLabel name="button lr" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="L / R" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
-    <eLabel name="button lire bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
-    <eLabel name="button exit" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
-    <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
-  </screen>
+    <widget source="ServiceEvent" render="Label" position="1155,1037" size="200,36" noWrap="1" font="Regular;26" foregroundColor="foreground3" backgroundColor="background2" transparent="1">
+  <convert type="NFRFunktion">Plugins2</convert>
+</widget>
+    <widget source="ServiceEvent" render="Label" position="1405,1037" size="200,36" noWrap="1" font="Regular;26" foregroundColor="foreground3" backgroundColor="background2" transparent="1">
+  <convert type="NFRFunktion">Plugins1</convert>
+</widget>
+</screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelectionRadio" position="0,0" size="1920,840" title="ChannelSelectionRadio">
     <widget backgroundColor="background" font="Regular; 25" position="1211,728" render="Label" size="110,30" source="session.Event_Now" transparent="1" halign="right">
       <convert type="EventTime">StartTime</convert>
@@ -3596,35 +3608,35 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))</app
     <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
   </screen>
   <screen name="PluginDownloadBrowser" position="0,0" size="1920,1080" title="Downloadable plugins" flags="wfNoBorder" backgroundColor="transparent">
-  <widget source="Title" render="Label" position="15,6" size="900,50" font="Regular; 42" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
-  <widget name="list" itemHeight="55" backgroundColor="background" foregroundColor="foreground" position="30,75" size="900,860" zPosition="4" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" transparent="1" enableWrapAround="1" />
-  <widget name="text" position="30,952" size="900,66" zPosition="1" font="Regular; 28" halign="center" valign="center" foregroundColor="foreground" transparent="1" />
-  <!-- /*Lines-->
-  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/line_ud.png" position="0,58" size="1920,3" zPosition="5" />
-  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/line_ud.png" position="0,1019" size="1920,3" zPosition="5" />
-  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/960.png" position="0,945" size="960,1" zPosition="5" />
-  <!--Lines */-->
-  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 42" halign="right" position="1704,6" render="Label" size="200,50" source="global.CurrentTime" transparent="1" valign="center">
-    <convert type="ClockToText">Default</convert>
-  </widget>
-  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" position="1327,18" render="Label" size="450,37" source="global.CurrentTime" transparent="1" valign="center" halign="right">
-    <convert type="ClockToText">Format:%A, %d. %B %Y</convert>
-  </widget>
-  <!--Uhr */-->
-  <eLabel name="button_red" position="15,1070" size="280,4" backgroundColor="button_red" zPosition="1" />
-  <eLabel name="button_green" position="310,1070" size="280,4" backgroundColor="button_green" zPosition="1" />
-  <eLabel name="button_yellow" position="605,1070" size="280,4" backgroundColor="button_yellow" zPosition="1" />
-  <eLabel name="button_blue" position="900,1070" size="280,4" backgroundColor="button_blue" zPosition="1" />
-  <eLabel name="DB" position="0,1023" size="1920,57" zPosition="-10" backgroundColor="background2" />
-  <eLabel name="DB" position="0,56" size="960,967" zPosition="-10" backgroundColor="background" />
-  <eLabel name="DB" position="0,0" size="1920,57" zPosition="-10" backgroundColor="background2" />
-  <eLabel name="DB" position="960,1018" size="960,5" zPosition="-10" backgroundColor="background" />
-  <eLabel name="DB" position="960,57" size="960,5" zPosition="-10" backgroundColor="background" />
-  <eLabel name="button OK" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="OK" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
-  <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
-  <eLabel name="button exit" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
-  <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
-</screen>
+    <widget source="Title" render="Label" position="15,6" size="900,50" font="Regular; 42" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+    <widget name="list" itemHeight="55" backgroundColor="background" foregroundColor="foreground" position="30,75" size="900,860" zPosition="4" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" transparent="1" enableWrapAround="1" />
+    <widget name="text" position="30,952" size="900,66" zPosition="1" font="Regular; 28" halign="center" valign="center" foregroundColor="foreground" transparent="1" />
+    <!-- /*Lines-->
+    <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/line_ud.png" position="0,58" size="1920,3" zPosition="5" />
+    <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/line_ud.png" position="0,1019" size="1920,3" zPosition="5" />
+    <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/960.png" position="0,945" size="960,1" zPosition="5" />
+    <!--Lines */-->
+    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 42" halign="right" position="1704,6" render="Label" size="200,50" source="global.CurrentTime" transparent="1" valign="center">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" position="1327,18" render="Label" size="450,37" source="global.CurrentTime" transparent="1" valign="center" halign="right">
+      <convert type="ClockToText">Format:%A, %d. %B %Y</convert>
+    </widget>
+    <!--Uhr */-->
+    <eLabel name="button_red" position="15,1070" size="280,4" backgroundColor="button_red" zPosition="1" />
+    <eLabel name="button_green" position="310,1070" size="280,4" backgroundColor="button_green" zPosition="1" />
+    <eLabel name="button_yellow" position="605,1070" size="280,4" backgroundColor="button_yellow" zPosition="1" />
+    <eLabel name="button_blue" position="900,1070" size="280,4" backgroundColor="button_blue" zPosition="1" />
+    <eLabel name="DB" position="0,1023" size="1920,57" zPosition="-10" backgroundColor="background2" />
+    <eLabel name="DB" position="0,56" size="960,967" zPosition="-10" backgroundColor="background" />
+    <eLabel name="DB" position="0,0" size="1920,57" zPosition="-10" backgroundColor="background2" />
+    <eLabel name="DB" position="960,1018" size="960,5" zPosition="-10" backgroundColor="background" />
+    <eLabel name="DB" position="960,57" size="960,5" zPosition="-10" backgroundColor="background" />
+    <eLabel name="button OK" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="OK" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+    <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+    <eLabel name="button exit" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+    <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PositionerSetup" position="0,0" size="1920,1080" title="Positioner setup...">
     <eLabel backgroundColor="background2" font="Regular; 42" foregroundColor="foreground3" halign="left" position="15,6" size="900,50" text="Positioner setup..." transparent="1" />
     <widget itemHeight="50" backgroundColor="background" foregroundColor="foreground" font="Regular;24" name="list" position="30,75" size="900,440" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" transparent="1" />
